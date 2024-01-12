@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Astra Daido Steel Indonesia</title>
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="index.html">Maintenance Processing</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Settings</a></li>
+                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Core</div>
+                            <a class="nav-link" href="index.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Dashboard
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Interface</div>                            
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                 Menu
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                        Handling Menu
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingPagesCollapseAuth" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="view_handling.html">Handling Customer</a>
+                                            <a class="nav-link" href="view_deptmtce.html">Dep.MTCE</a>
+                                            <a class="nav-link" href="history_claim.html">History Status Claim</a>
+                                            <a class="nav-link" href="history_complain.html">History Status Complain</a>
+                                        </nav>
+                                    </div>
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseProduction" aria-expanded="false" aria-controls="collapseProduction">
+                                        Maintenance Menu
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="collapseProduction" aria-labelledby="headingProduction" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseProductionAuth" aria-expanded="false" aria-controls="collapseProductionAuth">
+                                                Production
+                                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                            </a>
+                                            <div class="collapse" id="collapseProductionAuth" aria-labelledby="headingProductionAuth" data-bs-parent="#collapseProduction">
+                                                <nav class="sb-sidenav-menu-nested nav">
+                                                    <a class="nav-link" href="dashproduction.html">Form</a>
+                                                </nav>
+                                            </div>
+                                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseMaintenanceAuth" aria-expanded="false" aria-controls="collapseMaintenanceAuth">
+                                                Maintenance
+                                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                            </a>
+                                            <div class="collapse" id="collapseMaintenanceAuth" aria-labelledby="headingMaintenanceAuth" data-bs-parent="#collapseProduction">
+                                                <nav class="sb-sidenav-menu-nested nav">
+                                                    <a class="nav-link" href="dashreceivedfpp.html">Received FPP</a>
+                                                    <a class="nav-link" href="dashtindaklanjut.html">Tindak Lanjut</a>
+                                                </nav>
+                                            </div>
+                                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseDeptMaintenanceAuth" aria-expanded="false" aria-controls="collapseDeptMaintenanceAuth">
+                                                Departement Maintenance
+                                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                            </a>
+                                            <div class="collapse" id="collapseDeptMaintenanceAuth" aria-labelledby="headingDeptMaintenanceAuth" data-bs-parent="#collapseProduction">
+                                                <nav class="sb-sidenav-menu-nested nav">
+                                                    <a class="nav-link" href="dashdeptmaintenance.html">Approved FPP</a>
+                                                </nav>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                </nav>
+                            </div>
+                            
+                          
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Logged in as:</div>
+                        Start Bootstrap
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Approved FPP</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                            <li class="breadcrumb-item active">Departement Maintenance</li>
+                            <li class="breadcrumb-item active">Approved FPP</li>
+                        </ol>
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h2>Form Permintaan Perbaikan</h2>
+                                <title>Form Permintaan Perbaikan</title>
+                                <form action="proses_form.php" method="post" enctype="multipart/form-data">
+                                    <table class="table">
+                                        <tr>
+                                            <td>Pemohon<span style="color: red;">*</span></td>
+                                            <td><input type="text" class="form-control" id="pemohon" name="pemohon"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Date<span style="color: red;">*</span></td>
+                                            <td><input type="date" class="form-control" id="date" name="date"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Pilih Section (CT/MC/MC Custom/Bubut/HT)<span style="color: red;">*</span></td>
+                                            <td>
+                                                <select class="form-control" id="section" name="section">
+                                                    <option value="CT">CT</option>
+                                                    <option value="MC">MC</option>
+                                                    <option value="MC_Custom">MC Custom</option>
+                                                    <option value="Bubut">Bubut</option>
+                                                    <option value="HT">HT</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Pilih Mesin<span style="color: red;">*</span></td>
+                                            <td>
+                                                <select class="form-control" id="mesin" name="mesin">
+                                                    <option value="mesin1">Mesin 1</option>
+                                                    <option value="mesin2">Mesin 2</option>
+                                                    <option value="mesin3">Mesin 3</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Pilih Lokasi Mesin (Deltamas, DS8)<span style="color: red;">*</span></td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="lokasiDeltamas" name="lokasi[]" value="Deltamas">
+                                                    <label class="form-check-label" for="lokasiDeltamas">Deltamas</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="lokasiDS8" name="lokasi[]" value="DS8">
+                                                    <label class="form-check-label" for="lokasiDS8">DS8</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Kendala<span style="color: red;">*</span></td>
+                                            <td><textarea class="form-control" id="kendala" name="kendala" rows="4" placeholder="Masukkan kendala dengan rapi"></textarea></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Di Buat<span style="color: red;">*</span></td>
+                                            <td><input type="text" class="form-control" id="diBuat" name="diBuat"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tgl Cek Mesin<span style="color: red;">*</span></td>
+                                            <td><input type="date" class="form-control" id="tglCekMesin" name="tglCekMesin"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Rencana Perbaikan (Schedule - berapa hari)<span style="color: red;">*</span></td>
+                                            <td><input type="date" class="form-control" id="rencanaPerbaikan" name="rencanaPerbaikan"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Penyebab Masalah<span style="color: red;">*</span></td>
+                                            <td><textarea class="form-control" id="penyebabMasalah" name="penyebabMasalah" rows="4"></textarea></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tindakan Perbaikan<span style="color: red;">*</span></td>
+                                            <td><textarea class="form-control" id="tindakanPerbaikan" name="tindakanPerbaikan" rows="4"></textarea></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Waktu Selesai (Tgl Selesai)<span style="color: red;">*</span></td>
+                                            <td><input type="date" class="form-control" id="waktuSelesai" name="waktuSelesai"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Hasil<span style="color: red;">*</span></td>
+                                            <td><textarea class="form-control" id="hasil" name="hasil" rows="4"></textarea></td>
+                                        </tr>
+                                    </table>
+                                
+                                    <div class="form-footer">
+                                        <button type="submit" class="btn btn-primary">Confirm</button>
+                                    </div>
+                                </form>
+                                
+                                
+                            </div>
+                        
+                        </div>
+                        <div style="height: 100vh"></div>
+                        <div class="card mb-4"><div class="card-body">When scrolling, the navigation stays at the top of the page. This is the end of the static navigation demo.</div></div>
+                    </div>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Your Website 2023</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>

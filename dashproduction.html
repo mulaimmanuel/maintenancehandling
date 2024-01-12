@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Astra Daido Steel Indonesia</title>
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+        <!-- DataTables CSS -->
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
+    
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+        <!-- DataTables JS -->
+        <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+    </head>
+    <body>
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="index.html">Astra Daido Steel</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Settings</a></li>
+                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Core</div>
+                            <a class="nav-link" href="index.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Dashboard
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Interface</div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseProduction" aria-expanded="false" aria-controls="collapseProduction">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Menu
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseProduction" aria-labelledby="headingProduction" data-bs-parent="#layoutAuthentication">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseProductionAuth" aria-expanded="false" aria-controls="collapseProductionAuth">
+                                        Production
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="collapseProductionAuth" aria-labelledby="headingProductionAuth" data-bs-parent="#collapseProduction">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="dashproduction.html">Form</a>
+                                        </nav>
+                                    </div>
+                        
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseMaintenanceAuth" aria-expanded="false" aria-controls="collapseMaintenanceAuth">
+                                        Maintenance
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="collapseMaintenanceAuth" aria-labelledby="headingMaintenanceAuth" data-bs-parent="#collapseProduction">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="dashreceivedfpp.html">Received FPP</a>
+                                            <a class="nav-link" href="dashtindaklanjut.html">Tindak Lanjut</a>
+                                        </nav>
+                                    </div>
+                        
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseDeptMaintenanceAuth" aria-expanded="false" aria-controls="collapseDeptMaintenanceAuth">
+                                        Departement Maintenance
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="collapseDeptMaintenanceAuth" aria-labelledby="headingDeptMaintenanceAuth" data-bs-parent="#collapseProduction">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="dashdeptmaintenance.html">Approved FPP</a>
+                                        </nav>
+                                    </div>
+                                </nav>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Logged in as:</div>
+                        Start Bootstrap
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Production</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                            <li class="breadcrumb-item active">Production</li>
+                        </ol>
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h2>List Form FPP</h2>
+                                <div class="text-right mb-3">
+                                    <a href="formproduction.html" class="btn btn-primary">Tambah</a>
+                                </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table id="data-table" class="table table-bordered">
+                                        <thead class="thead-dark">
+                                            <tr>
+                                                <th>Mesin</th>
+                                                <th>Section</th>
+                                                <th>Lokasi Mesin</th>
+                                                <th>Kendala atau Kerusakan</th>
+                                                <th>Foto</th>
+                                                <th>Action</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Mesin 1</td>
+                                                <td>Section 1</td>
+                                                <td>Lokasi 1</td>
+                                                <td>Kendala 1</td>
+                                                <td><img src="parts.jpg" alt="foto1.jpg" class="img-fluid"></td>
+                                                <td>
+                                                    <button class="btn btn-success edit-btn" onclick="editRow(this)">Edit</button>
+                                                    <button class="btn btn-danger delete-btn" onclick="deleteRow(this)">Delete</button>
+                                                </td>
+                                                <td><em><strong>Waiting</strong></em></td>
+                                            </tr>
+                                            <!-- ... Data lainnya ... -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+
+                            </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div style="height: 100vh"></div>
+                        <div class="card mb-4"><div class="card-body">When scrolling, the navigation stays at the top of the page. This is the end of the static navigation demo.</div></div>
+                    </div>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Your Website 2023</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#data-table').DataTable();
+            });
+        </script>
+    </body>
+</html>

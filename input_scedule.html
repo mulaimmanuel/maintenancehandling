@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Input From Handle</title>
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- pdf -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    </head>
+    <body>
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="index.html">Astra Daido Steel Indonesia</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <a class="nav-link" href="index.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Dashboard
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Menu</div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                Menu
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                        Handling Menu
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <a class="nav-link" href="view_handling.html">Handling Customer</a>
+                                        <a class="nav-link" href="view_deptmtce.html">Dep.MTCE</a>
+                                        <a class="nav-link" href="history_claim.html">History Status Claim</a>
+                                        <a class="nav-link" href="history_complain.html">History Status Complain</a>
+                                    </div>
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseProduction" aria-expanded="false" aria-controls="collapseProduction">
+                                        Maintenance Menu
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="collapseProduction" aria-labelledby="headingProduction" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseProductionAuth" aria-expanded="false" aria-controls="collapseProductionAuth">
+                                                Production
+                                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                            </a>
+                                            <div class="collapse" id="collapseProductionAuth" aria-labelledby="headingProductionAuth" data-bs-parent="#collapseProduction">
+                                                <nav class="sb-sidenav-menu-nested nav">
+                                                    <a class="nav-link" href="dashproduction.html">Form</a>
+                                                </nav>
+                                            </div>
+                                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseMaintenanceAuth" aria-expanded="false" aria-controls="collapseMaintenanceAuth">
+                                                Maintenance
+                                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                            </a>
+                                            <div class="collapse" id="collapseMaintenanceAuth" aria-labelledby="headingMaintenanceAuth" data-bs-parent="#collapseProduction">
+                                                <nav class="sb-sidenav-menu-nested nav">
+                                                    <a class="nav-link" href="dashreceivedfpp.html">Received FPP</a>
+                                                    <a class="nav-link" href="dashtindaklanjut.html">Tindak Lanjut</a>
+                                                </nav>
+                                            </div>
+                                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseDeptMaintenanceAuth" aria-expanded="false" aria-controls="collapseDeptMaintenanceAuth">
+                                                Departement Maintenance
+                                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                            </a>
+                                            <div class="collapse" id="collapseDeptMaintenanceAuth" aria-labelledby="headingDeptMaintenanceAuth" data-bs-parent="#collapseProduction">
+                                                <nav class="sb-sidenav-menu-nested nav">
+                                                    <a class="nav-link" href="dashdeptmaintenance.html">Approved FPP</a>
+                                                </nav>
+                                            </div>
+                                        </nav>
+                                    </div>
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Form Input Schedule </h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                            <li class="breadcrumb-item active"><a href="view_deptmtce.html">Handle Customer Menu</a></li>
+                            <li class="breadcrumb-item active"><a href="input_scedule.html">Form Input Schedule</a></li>
+                        </ol>
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <form class="row g-3" id="myForm">
+                                    <div class="col-md-2">
+                                        <label for="scedule_visit" class="form-label">Schedule Visit<font color="red">*</font></label>
+                                        <input type="date" class="form-control input-sm" id="scedule_visit" placeholder="Thickness" required style="max-width: 150px;">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="note_visit" class="form-label">Note Hasil Visit<font color="red">*</font></label>
+                                    </div>
+                                    <div class="col-12">
+                                        <textarea id="note_visit" name="w3review" rows="5" cols="50" required> </textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="hasil_action" class="form-label">Hasil Korektif Action<font color="red">*</font></label>
+                                    </div>
+                                    <div class="col-12">
+                                        <textarea id="note_visit" name="w3review" rows="5" cols="50" required> </textarea>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="due_date" class="form-label">Due Date<font color="red">*</font></label>
+                                        <input type="date" class="form-control input-sm" id="due_date" placeholder="Thickness" required style="max-width: 150px;">
+                                    </div>
+                                      <div class="col-12">
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <button type="button" class="btn btn-danger" onclick="resetForm()">Reset</button>
+                                        <button id="printPdfBtn" class="btn btn-success">Print PDF</button>
+
+                                      </div>
+                                  </form>
+                            </div>
+                        </div>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Astra Daido Steel Indonesia</div>
+                            <div>
+                                <!-- <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+
+        <script>
+             function goBack() {
+            // Menggunakan metode history untuk kembali ke halaman sebelumnya
+            window.history.back();
+        }
+
+        //resetbutton
+        function resetForm() {
+            // Mendapatkan elemen formulir
+            var form = document.getElementById('myForm');
+            
+            // Mereset nilai-nilai input pada formulir
+            form.reset();
+        }
+
+        //uploadfile
+        function displayCancelBtn() {
+        var fileInput = document.getElementById('formFile');
+        var cancelBtn = document.getElementById('cancelBtn');
+
+        if (fileInput.files.length > 0) {
+            cancelBtn.style.display = 'inline-block';
+        } else {
+            cancelBtn.style.display = 'none';
+        }
+    }
+
+    function cancelUpload() {
+        var fileInput = document.getElementById('formFile');
+        var cancelBtn = document.getElementById('cancelBtn');
+
+        // Reset file input
+        fileInput.value = '';
+
+        // Hide cancel button
+        cancelBtn.style.display = 'none';
+    }
+
+ // Fungsi untuk mengonversi formulir menjadi format PDF
+ function printPDF() {
+        // Inisialisasi objek jsPDF
+        var pdf = new jsPDF();
+
+        // Mendapatkan nilai dari elemen formulir
+        var scheduleVisit = document.getElementById('scedule_visit').value;
+        var noteHasilVisit = document.getElementById('note_visit').value;
+        var hasilKorektifAction = document.getElementById('hasil_action').value;
+        var dueDate = document.getElementById('due_date').value;
+
+        // Menambahkan nilai-nilai formulir ke PDF
+        pdf.text(10, 10, "Schedule Visit: " + scheduleVisit);
+        pdf.text(10, 20, "Note Hasil Visit: " + noteHasilVisit);
+        pdf.text(10, 30, "Hasil Korektif Action: " + hasilKorektifAction);
+        pdf.text(10, 40, "Due Date: " + dueDate);
+
+        // Simpan file PDF dengan nama yang sesuai
+        pdf.save("form_data.pdf");
+    }
+
+    // Menambahkan event listener pada tombol "Print PDF"
+    document.getElementById("printPdfBtn").addEventListener("click", printPDF);
+        </script>
+    </body>
+</html>
